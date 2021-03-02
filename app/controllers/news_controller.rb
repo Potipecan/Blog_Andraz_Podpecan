@@ -23,7 +23,7 @@ class NewsController < ApplicationController
   def create
     @news = News.new(news_params)
     @news.date = Time.now.getutc
-    @news.user_id = current_user
+    @news.user = current_user
 
     respond_to do |format|
       if @news.save
