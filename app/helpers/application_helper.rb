@@ -4,6 +4,8 @@ module ApplicationHelper
     capture do
       concat link_to "Domov", root_path
       concat " "
+      concat link_to "Novice", news_index_path
+      concat " "
       if user_signed_in?
         concat link_to "Uredi profil", edit_user_registration_path
         concat " "

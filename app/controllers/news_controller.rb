@@ -22,6 +22,8 @@ class NewsController < ApplicationController
   # POST /news or /news.json
   def create
     @news = News.new(news_params)
+    @news.date = Time.now.getutc
+    @news.user_id = current_user
 
     respond_to do |format|
       if @news.save
