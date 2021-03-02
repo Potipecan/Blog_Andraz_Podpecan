@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210302083702) do
+ActiveRecord::Schema.define(version: 20210302084605) do
 
-  create_table "news", force: :cascade do |t|
-    t.string "title"
-    t.string "caption"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "date"
-  end
+# Could not dump table "news" because of following StandardError
+#   Unknown type 'reference' for column 'user_id'
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type 'reference' for column 'user_id'
